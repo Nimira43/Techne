@@ -7,5 +7,9 @@
   },
   "author": "Nick Rabone",
   "license": "MIT",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2"
+  }
 }
