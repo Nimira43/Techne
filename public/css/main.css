@@ -10,3 +10,17 @@
   text-decoration: none;
 }
 
+:root {
+  --dark: #111;
+  --light: #fffcfa;
+  --grey-extra-light: #eee;
+  --grey-light: #ccc;
+  --grey-medium: #999;
+  --grey-dark: #333;
+}
+
+.main-header {
+  width: 100%;
+  height: 4.5rem;
+  background-color: var(--dark);
+}
