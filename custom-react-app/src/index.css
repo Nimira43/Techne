@@ -5,6 +5,10 @@
   font-weight: 300;
 }
 
+.logo {
+  font-family: 'Bonheur Royale', serif;
+}
+
 :root {
   --primary: #ff4500;
   --secondary: #87ceeb;

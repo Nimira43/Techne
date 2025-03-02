@@ -2,8 +2,8 @@ import React from 'react'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Custom React Template</h1>
+    <div>
+      <h1 className='logo'>Custom React Template</h1>
     </div>
   )
 }
