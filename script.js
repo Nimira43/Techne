@@ -4,7 +4,8 @@ window.addEventListener('load', function () {
   canvas.width = 600
   canvas.height = 600
 
-  ctx.lineWidth = 20
+  ctx.lineWidth = 50
+  ctx.lineCap = 'round'
 
   class Fractal {
     constructor(canvasWidth, canvasHeight) {
