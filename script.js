@@ -17,7 +17,6 @@ window.addEventListener('load', function () {
     }
 
     draw(context) {
-
       context.save()
       context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
       context.scale(1, 1)
@@ -27,8 +26,8 @@ window.addEventListener('load', function () {
       context.lineTo(this.size, 0)
       context.stroke()
       context.restore()
-      
-      
+    }
+    #drawLine() {
       
     }
   }
