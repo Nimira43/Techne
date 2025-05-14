@@ -7,19 +7,20 @@ window.addEventListener('load', function () {
   ctx.lineWidth = 50
   ctx.lineCap = 'round'
   ctx.strokeStyle = 'orange'
+  ctx.fillStyle = 'black'
 
   class Fractal {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
-      this.size = this.canvasWidth * 0.2
+      this.size = this.canvasWidth * 0.4
     }
 
     draw(context) {
-      context.fillRect(50, 50, 500, 300)
+      context.fillRect(0, 0, this.canvasWidth, this.canvasHeight)
       context.beginPath()
-      context.moveTo(50, 50)
-      context.lineTo(this.size, 330)
+      context.moveTo(0, 0)
+      context.lineTo(this.size, 0)
       context.stroke()
     }
   }
