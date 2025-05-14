@@ -16,9 +16,10 @@ window.addEventListener('load', function () {
     }
 
     draw(context) {
+      context.fillRect(50, 50, 500, 300)
       context.beginPath()
-      context.moveTo(150, 150)
-      context.lineTo(this.size, 300)
+      context.moveTo(50, 50)
+      context.lineTo(this.size, 330)
       context.stroke()
     }
   }
