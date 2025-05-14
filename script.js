@@ -17,8 +17,8 @@ window.addEventListener('load', function () {
     }
 
     draw(context) {
-      context.translate(150, 150)
-      context.rotate(0.7)
+      context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
+      context.rotate(-0.7)
       context.fillRect(0, 0, this.canvasWidth, this.canvasHeight)
       context.beginPath()
       context.moveTo(0, 0)
