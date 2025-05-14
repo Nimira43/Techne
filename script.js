@@ -17,6 +17,7 @@ window.addEventListener('load', function () {
     }
 
     draw(context) {
+      context.save()
       context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
       context.scale(0.5, 0.5)
       context.rotate(Math.PI * 2)
