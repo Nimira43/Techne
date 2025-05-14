@@ -19,9 +19,10 @@ window.addEventListener('load', function () {
     draw(context) {
       context.save()
       context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
-      context.scale(0.5, 0.5)
-      context.rotate(Math.PI * 2)
+      context.scale(0.3, 0.3)
+      context.rotate(0)
       context.fillRect(0, 0, this.canvasWidth, this.canvasHeight)
+      context.restore()
       context.beginPath()
       context.moveTo(0, 0)
       context.lineTo(this.size, 0)
