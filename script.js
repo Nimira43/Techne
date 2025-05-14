@@ -20,33 +20,17 @@ window.addEventListener('load', function () {
       context.save()
       context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
       context.scale(1, 1)
-
-      this.#drawLine(context)
-      context.rotate(0.8)
-      context.translate(43, 67)
-      this.#drawLine(context)
-      context.rotate(0.8)
-      context.translate(43, 67)
-      this.#drawLine(context)
-      context.rotate(0.8)
-      context.translate(43, 67)
-      this.#drawLine(context)
-      context.rotate(0.8)
-      context.translate(43, 67)
-      this.#drawLine(context)
-      context.rotate(0.8)
-      context.translate(43, 67)
-      this.#drawLine(context)
-      context.rotate(0.8)
-      context.translate(43, 67)
-      this.#drawLine(context)
-      context.rotate(0.8)
-      context.translate(43, 67)
-      this.#drawLine(context)
-      context.rotate(0.8)
-      context.translate(43, 67)
+      context.rotate(0)
+      context.translate(50, 50)
+      
+      for (let i = 0; i < 5; i++) {
+        this.#drawLine(context)
+        context.rotate(0.5)
+      }
+   
       context.restore()
     }
+    
     #drawLine(context) {
       context.beginPath()
       context.moveTo(0, 0)
