@@ -4,6 +4,8 @@ window.addEventListener('load', function () {
   canvas.width = 600
   canvas.height = 600
 
+  ctx.lineWidth = 20
+
   class Fractal {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
@@ -12,8 +14,8 @@ window.addEventListener('load', function () {
 
     draw(context) {
       context.beginPath()
-      context.moveTo(0, 0)
-      context.lineTo(canvas.width, canvas.height)
+      context.moveTo(50, 50)
+      context.lineTo(canvas.width - 50, canvas.height - 50)
       context.stroke()
     }
   }
