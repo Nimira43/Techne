@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
       this.size = this.canvasWidth * 0.4
-      this.sides = 17
+      this.sides = 11
     } 
 
     draw(context) {
@@ -36,6 +36,11 @@ window.addEventListener('load', function () {
       context.moveTo(0, 0)
       context.lineTo(this.size, 0)
       context.stroke()
+
+      context.save()
+      context.rotate(1)
+      // this.#drawLine(context)
+      context.restore()
     }
   }
 
