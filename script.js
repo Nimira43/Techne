@@ -6,6 +6,7 @@ window.addEventListener('load', function () {
 
   ctx.lineWidth = 50
   ctx.lineCap = 'round'
+  ctx.strokeStyle = 'orange'
 
   class Fractal {
     constructor(canvasWidth, canvasHeight) {
