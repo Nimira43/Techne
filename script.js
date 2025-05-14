@@ -42,7 +42,7 @@ window.addEventListener('load', function () {
 
       context.save()
       context.rotate(1)
-      this.#drawLine(context)
+      this.#drawLine(context, level + 1)
       context.restore()
     }
   }
