@@ -15,6 +15,7 @@ window.addEventListener('load', function () {
       this.canvasWidth = canvasWidth
       this.size = this.canvasWidth * 0.4
       this.sides = 11
+      this.maxLevel = 2
     } 
 
     draw(context) {
@@ -31,7 +32,9 @@ window.addEventListener('load', function () {
       context.restore()
     }
     
-    #drawLine(context) {
+    #drawLine(context, level) {
+      if (level > this.maxLevel) return
+
       context.beginPath()
       context.moveTo(0, 0)
       context.lineTo(this.size, 0)
