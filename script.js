@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
       context.rotate(0)
       
       for (let i = 0; i < this.sides; i++) {
-        this.#drawLine(context)
+        this.#drawLine(context, 0)
         context.rotate((Math.PI * 2) / this.sides)
       }
    
