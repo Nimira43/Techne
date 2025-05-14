@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
       context.rotate(0)
       context.translate(50, 50)
       
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 26; i++) {
         this.#drawLine(context)
         context.rotate(0.5)
       }
