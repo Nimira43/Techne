@@ -20,6 +20,7 @@ window.addEventListener('load', function () {
       context.save()
       context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
       context.scale(1, 1)
+      this.#drawLine(context)
       context.rotate(0.8)
       context.restore()
     }
