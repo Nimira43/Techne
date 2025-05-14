@@ -21,11 +21,10 @@ window.addEventListener('load', function () {
       context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
       context.scale(1, 1)
       context.rotate(0)
-      context.translate(50, 50)
       
-      for (let i = 0; i < 26; i++) {
+      for (let i = 0; i < 14; i++) {
         this.#drawLine(context)
-        context.rotate(0.5)
+        context.rotate((Math.PI * 2) / 14)
       }
    
       context.restore()
