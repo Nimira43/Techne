@@ -5,7 +5,11 @@ window.addEventListener('load', function () {
   canvas.height = 600
 
   class Fractal {
-
+    constructor(canvasWidth, canvasHeight) {
+      this.canvasHeight = canvasHeight
+      this.canvasWidth = canvasWidth
+    }
+    
   }
 
   class Particle {
@@ -13,6 +17,6 @@ window.addEventListener('load', function () {
   }
 
   class Rain {
-    
+
   }
 })
