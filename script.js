@@ -11,12 +11,13 @@ window.addEventListener('load', function () {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
+      this.size = 100
     }
 
     draw(context) {
       context.beginPath()
-      context.moveTo(50, 50)
-      context.lineTo(canvas.width - 50, canvas.height - 50)
+      context.moveTo(150, 150)
+      context.lineTo(this.size, 300)
       context.stroke()
     }
   }
