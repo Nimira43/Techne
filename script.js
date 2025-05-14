@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
       this.size = this.canvasWidth * 0.4
-    }
+    } 
 
     draw(context) {
       context.save()
