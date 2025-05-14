@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
       context.stroke()
 
       context.save()
-      context.scale(0.9, 0.9)
+      context.scale(0.5, 2.9)
       context.rotate(1)
       this.#drawLine(context, level + 1)
       context.restore()
