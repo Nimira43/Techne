@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
-      this.size = 100
+      this.size = this.canvasWidth * 0.2
     }
 
     draw(context) {
