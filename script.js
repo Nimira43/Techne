@@ -13,9 +13,9 @@ window.addEventListener('load', function () {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
-      this.size = this.canvasWidth * 0.4
-      this.sides = 11
-      this.maxLevel = 3
+      this.size = this.canvasWidth * 0.3
+      this.sides = 7       // Change this
+      this.maxLevel = 5    // Change this
     } 
 
     draw(context) {
@@ -41,8 +41,9 @@ window.addEventListener('load', function () {
       context.stroke()
 
       context.save()
-      context.scale(0.5, 2.9)
-      context.rotate(1)
+      context.translate(this.size, 0)
+      context.scale(0.7, 0.7) // Change this
+      context.rotate(0.9)     // Change this
       this.#drawLine(context, level + 1)
       context.restore()
     }
