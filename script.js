@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
     }
 
     draw(context) {
-      context.fillRect(0, 0, this.canvasWidth, this.canvasHeight)
+      context.fillRect(50, 0, this.canvasWidth, this.canvasHeight)
       context.beginPath()
       context.moveTo(0, 0)
       context.lineTo(this.size, 0)
