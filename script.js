@@ -21,14 +21,13 @@ window.addEventListener('load', function () {
       context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
       context.scale(1, 1)
       context.rotate(0.8)
+      context.restore()
+    }
+    #drawLine(context) {
       context.beginPath()
       context.moveTo(0, 0)
       context.lineTo(this.size, 0)
       context.stroke()
-      context.restore()
-    }
-    #drawLine() {
-      
     }
   }
 
