@@ -46,7 +46,7 @@ window.addEventListener('load', function () {
 
       for (let i = 0; i < this.branches; i++) {
         
-        context.translate(this.size, 0)
+        context.translate(this.size / this.branches, 0)
         context.scale(this.scale, this.scale)
         
         context.save()
