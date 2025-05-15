@@ -14,10 +14,10 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
       this.size = this.canvasWidth * 0.3 
-      this.sides = 1
+      this.sides = 5
       this.maxLevel = 1
       this.scale = 0.7
-      this.spread = 1
+      this.spread = 2.5
     } 
 
     draw(context) {
