@@ -17,6 +17,7 @@ window.addEventListener('load', function () {
       this.sides = 1
       this.maxLevel = 1
       this.scale = 0.7
+      this.spread = 1
     } 
 
     draw(context) {
