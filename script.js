@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
   canvas.width = 600
   canvas.height = 600
 
-  ctx.lineWidth = 50
+  ctx.lineWidth = 30                        // Change
   ctx.lineCap = 'round'
   ctx.strokeStyle = 'orange'
   ctx.fillStyle = 'black'
@@ -13,11 +13,11 @@ window.addEventListener('load', function () {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
-      this.size = this.canvasWidth * 0.3
-      this.sides = 3      // Change
-      this.maxLevel = 3   // Change 
-      this.scale = 0.7    // Change
-      this.spread = 2.3   // Change
+      this.size = this.canvasWidth * 0.2    // Change
+      this.sides = 1                        // Change
+      this.maxLevel = 3                     // Change
+      this.scale = 0.6                      // Change
+      this.spread = 1                       // Change 
     }
 
     draw(context) {
