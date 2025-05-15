@@ -16,6 +16,7 @@ window.addEventListener('load', function () {
       this.size = this.canvasWidth * 0.3 
       this.sides = 1
       this.maxLevel = 1
+      this.scale = 0.7
     } 
 
     draw(context) {
@@ -46,6 +47,11 @@ window.addEventListener('load', function () {
       
       context.save()
       context.rotate(0.9)     
+      this.#drawLine(context, level + 1)
+      context.restore()
+      
+      context.save()
+      context.rotate(-0.9)     
       this.#drawLine(context, level + 1)
       context.restore()
       
