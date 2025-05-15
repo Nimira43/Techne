@@ -43,7 +43,7 @@ window.addEventListener('load', function () {
 
       context.save()
       context.translate(this.size, 0)
-      context.scale(0.7, 0.7) 
+      context.scale(this.scale, this.scale) 
       
       context.save()
       context.rotate(0.9)     
