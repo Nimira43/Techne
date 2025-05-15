@@ -13,7 +13,7 @@ window.addEventListener('load', function () {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
-      this.size = this.canvasWidth * 0.3
+      this.size = this.canvasWidth * 0.3 // Change this
       this.sides = 7       // Change this
       this.maxLevel = 5    // Change this
     } 
