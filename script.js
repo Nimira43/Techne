@@ -14,8 +14,8 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
       this.size = this.canvasWidth * 0.2    // Change
-      this.sides = 5                        // Change
-      this.maxLevel = 5                     // Change
+      this.sides = 1                       // Change
+      this.maxLevel = 3                     // Change
       this.scale = 0.6                     // Change
       this.spread = 1                       // Change 
       this.branches = 2                   // Change
@@ -42,10 +42,9 @@ window.addEventListener('load', function () {
       context.moveTo(0, 0)
       context.lineTo(this.size, 0)
       context.stroke()
-      context.save()
 
       for (let i = 0; i < this.branches; i++) {
-        
+        context.save()  
         context.translate(this.size - (this.size / this.branches) * i, 0)
         context.scale(this.scale, this.scale)
         
@@ -58,9 +57,8 @@ window.addEventListener('load', function () {
         context.rotate(-this.spread)
         this.#drawLine(context, level + 1)
         context.restore()
+        context.restore()
       }
-          
-      context.restore()
     }
   }
 
