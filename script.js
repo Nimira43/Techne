@@ -18,6 +18,7 @@ window.addEventListener('load', function () {
       this.maxLevel = 3                     // Change
       this.scale = 0.6                      // Change
       this.spread = 1                       // Change 
+      this.branches = 1
     }
 
     draw(context) {
