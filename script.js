@@ -47,12 +47,12 @@ window.addEventListener('load', function () {
       context.scale(this.scale, this.scale) 
       
       context.save()
-      context.rotate(0.9)     
+      context.rotate(this.spread)     
       this.#drawLine(context, level + 1)
       context.restore()
       
       context.save()
-      context.rotate(-0.9)     
+      context.rotate(-this.spread)     
       this.#drawLine(context, level + 1)
       context.restore()
       
