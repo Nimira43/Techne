@@ -42,21 +42,24 @@ window.addEventListener('load', function () {
       context.moveTo(0, 0)
       context.lineTo(this.size, 0)
       context.stroke()
+      context.save()
 
-      context.save()
-      context.translate(this.size, 0)
-      context.scale(this.scale, this.scale) 
-      
-      context.save()
-      context.rotate(this.spread)     
-      this.#drawLine(context, level + 1)
-      context.restore()
-      
-      context.save()
-      context.rotate(-this.spread)     
-      this.#drawLine(context, level + 1)
-      context.restore()
-      
+      for (let i = 0; i < this.branches; i++) {
+        
+        context.translate(this.size, 0)
+        context.scale(this.scale, this.scale)
+        
+        context.save()
+        context.rotate(this.spread)
+        this.#drawLine(context, level + 1)
+        context.restore()
+        
+        context.save()
+        context.rotate(-this.spread)
+        this.#drawLine(context, level + 1)
+        context.restore()
+      }
+          
       context.restore()
     }
   }
