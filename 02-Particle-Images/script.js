@@ -12,5 +12,7 @@ window.addEventListener('load', function () {
 
   }
 
-  
+  function animate() {
+    
+  }
 })
