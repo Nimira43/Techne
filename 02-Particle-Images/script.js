@@ -5,7 +5,11 @@ window.addEventListener('load', function () {
   canvas.height = window.innerHeight
 
   class Particle {
-
+    constructor() {
+      this.x = 0
+      this.y = 0
+      this.size = 3
+    }
   }
 
   class Effect {
@@ -13,6 +17,6 @@ window.addEventListener('load', function () {
   }
 
   function animate() {
-    
+
   }
 })
