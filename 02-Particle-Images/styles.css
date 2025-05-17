@@ -7,7 +7,7 @@
 }
 
 #canvas1 {
-  background: #ffd700;
+  background: #ffb300;
   position: absolute;
 }
 
@@ -36,5 +36,6 @@ button {
 
 button:hover {
   background: #ff4500;
+  border-color: #111;
   color: #111;  
 }
