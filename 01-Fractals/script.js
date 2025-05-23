@@ -82,6 +82,10 @@ window.addEventListener('load', function () {
       this.numberOfParticles = 20
       this.particles = []
     }
-    
+    #initialise() {
+      for (let i = 0; i < this.numberOfParticles; i++) {
+        this.particles.push(new Particle())
+      }
+    }
   }
 })
