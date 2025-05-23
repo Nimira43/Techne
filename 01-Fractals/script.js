@@ -21,7 +21,7 @@ window.addEventListener('load', function () {
       this.sides = 6                      // Change
       this.maxLevel = 3                   // Change
       this.scale = 0.5                    // Change
-      this.spread = 0.8                   // Change 
+      this.spread = 0.6                   // Change 
       this.branches = 2                   // Change
       this.colour = 'hsl(' + Math.random() * 360 +', 100%, 50%)'  // Change
     }

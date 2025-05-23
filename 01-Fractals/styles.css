@@ -22,8 +22,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 4px solid #ffa500;
-  background: #fff;
+  border: 4px solid #966304;
+  background: red;
   box-shadow: 20px 30px 40px rgba(0, 0, 0, 0.8);
   color: #ff8c00
 }
