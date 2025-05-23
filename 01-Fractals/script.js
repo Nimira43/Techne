@@ -75,8 +75,8 @@ window.addEventListener('load', function () {
     constructor(canvasWidth, canvasHeight) {
       this.canvasWidth = canvasWidth
       this.canvasHeight = canvasHeight
-      this.x = Math.random() * this.canvasWidth()
-      this.y = Math.random() * this.canvasHeight()
+      this.x = Math.random() * this.canvasWidth
+      this.y = Math.random() * this.canvasHeight
       this.width = 50
       this.height = 50
     }
@@ -114,4 +114,5 @@ window.addEventListener('load', function () {
   }
 
   const rainEffect = new Rain(canvas.width, canvas.height)
+  console.log(rainEffect)
 })
