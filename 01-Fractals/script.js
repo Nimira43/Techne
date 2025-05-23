@@ -103,7 +103,13 @@ window.addEventListener('load', function () {
           this.canvasWidth,
           this.canvasHeight
         ))
-      }
+      }   
+    }
+    run(context) {
+      this.particles.forEach(particle => {
+        particle.draw(context)
+        particle.update()
+      })   
     }
   }
 })
