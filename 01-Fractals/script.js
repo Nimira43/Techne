@@ -95,6 +95,7 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.numberOfParticles = 20
       this.particles = []
+      this.#initialise()
     }
     #initialise() {
       for (let i = 0; i < this.numberOfParticles; i++) {
