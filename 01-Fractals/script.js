@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 
   ctx.lineWidth = 10                        
   ctx.lineCap = 'round'
-  ctx.fillStyle = 'blue'                  
+  ctx.fillStyle = '#ff4500'                  
   ctx.shadowColor = 'black'                 
   ctx.shadowOffsetY = 10                    
   ctx.shadowOffsetX = 5                     
