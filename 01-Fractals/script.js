@@ -84,7 +84,9 @@ window.addEventListener('load', function () {
       this.x++
       this.y++
     }
-    
+    draw(context) {
+      context.fillRect(this.x, this.y, this.width, this.height) 
+    }
   }
 
   class Rain {
@@ -96,7 +98,10 @@ window.addEventListener('load', function () {
     }
     #initialise() {
       for (let i = 0; i < this.numberOfParticles; i++) {
-        this.particles.push(new Particle())
+        this.particles.push(new Particle(
+          this.canvasWidth,
+          this.canvasHeight
+        ))
       }
     }
   }
