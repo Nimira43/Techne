@@ -72,7 +72,15 @@ window.addEventListener('load', function () {
   fractal1.draw(ctx)
 
   class Particle {
-
+    constructor(canvasWidth, canvasHeight) {
+      this.canvasWidth = canvasWidth
+      this.canvasHeight = canvasHeight
+      this.x = Math.random() * this.canvasWidth()
+      this.y = Math.random() * this.canvasHeight()
+      this.width = 50
+      this.height = 50
+    }
+    
   }
 
   class Rain {
