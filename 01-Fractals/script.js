@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
   canvas.width = 600
   canvas.height = 600
 
-  ctx.lineWidth = 30                         // Change
+  ctx.lineWidth = 30                        
   ctx.lineCap = 'round'
   ctx.fillStyle = 'green'                  
   ctx.shadowColor = 'black'                 
@@ -16,12 +16,12 @@ window.addEventListener('load', function () {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
-      this.size = this.canvasWidth * 0.3      // Change
-      this.sides = 6                          // Change
-      this.maxLevel = 4 // Change This
-      this.scale = 0.5                        // Change
-      this.spread = Math.random() * 2.8 + 0.1 // Change 
-      this.branches = 2                       // Change
+      this.size = this.canvasWidth * 0.3    
+      this.sides = 6                         
+      this.maxLevel = 4
+      this.scale = 0.5                       
+      this.spread = Math.random() * 2.8 + 0.1 
+      this.branches = 2                       
       this.colour =
         'hsl(' + Math.random() * 360 + ', 100%, 50%)'
     }
@@ -76,6 +76,12 @@ window.addEventListener('load', function () {
   }
 
   class Rain {
-
+    constructor(canvasWidth, canvasHeight) {
+      this.canvasWidth = canvasWidth
+      this.canvasHeight = canvasHeight
+      this.numberOfParticles = 20
+      this.particles = []
+    }
+    
   }
 })
