@@ -115,4 +115,10 @@ window.addEventListener('load', function () {
 
   const rainEffect = new Rain(canvas.width, canvas.height)
   console.log(rainEffect)
+
+  function animate() {
+    rainEffect.run(ctx)
+    requestAnimationFrame(animate)
+  }
+  animate()
 })
