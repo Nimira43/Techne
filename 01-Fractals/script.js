@@ -6,7 +6,6 @@ window.addEventListener('load', function () {
 
   ctx.lineWidth = 30                        // Change
   ctx.lineCap = 'round'
-  
   ctx.fillStyle = 'black'
 
   class Fractal {
@@ -19,11 +18,11 @@ window.addEventListener('load', function () {
       this.scale = 0.5                    // Change
       this.spread = 1                     // Change 
       this.branches = 2                   // Change
-      this.colour = 'hsl(16, 100%, 50%)'
+      this.colour = 'hsl(' + Math.random() * 360 +', 100%, 50%)'
     }
 
     draw(context) {
-      context.strokeStyle = 'orange'
+      context.strokeStyle = this.colour
       context.save()
       context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
       context.scale(1, 1)
