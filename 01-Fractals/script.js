@@ -4,9 +4,9 @@ window.addEventListener('load', function () {
   canvas.width = 600
   canvas.height = 600
 
-  ctx.lineWidth = 30                        
+  ctx.lineWidth = 10                        
   ctx.lineCap = 'round'
-  ctx.fillStyle = 'green'                  
+  ctx.fillStyle = 'blue'                  
   ctx.shadowColor = 'black'                 
   ctx.shadowOffsetY = 10                    
   ctx.shadowOffsetX = 5                     
@@ -16,9 +16,9 @@ window.addEventListener('load', function () {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
-      this.size = this.canvasWidth * 0.3    
+      this.size = this.canvasWidth * 0.26    
       this.sides = 6                         
-      this.maxLevel = 4
+      this.maxLevel = 5
       this.scale = 0.5                       
       this.spread = Math.random() * 2.8 + 0.1 
       this.branches = 2                       
@@ -112,4 +112,6 @@ window.addEventListener('load', function () {
       })   
     }
   }
+
+  const rainEffect = new Rain(canvas.width, canvas.height)
 })
