@@ -6,7 +6,12 @@ window.addEventListener('load', function () {
 
   ctx.lineWidth = 30                        // Change
   ctx.lineCap = 'round'
-  ctx.fillStyle = 'black'
+  ctx.fillStyle = 'green'                   // Change
+  ctx.shadowColor = 'black'                 // Change
+  ctx.shadowOffsetY = 10                    // Change
+  ctx.shadowOffsetX = 5                     // Change
+  ctx.shadowBlur = 10                       // Change
+
 
   class Fractal {
     constructor(canvasWidth, canvasHeight) {
@@ -16,9 +21,9 @@ window.addEventListener('load', function () {
       this.sides = 6                      // Change
       this.maxLevel = 3                   // Change
       this.scale = 0.5                    // Change
-      this.spread = 1                     // Change 
+      this.spread = 0.8                   // Change 
       this.branches = 2                   // Change
-      this.colour = 'hsl(' + Math.random() * 360 +', 100%, 50%)'
+      this.colour = 'hsl(' + Math.random() * 360 +', 100%, 50%)'  // Change
     }
 
     draw(context) {
