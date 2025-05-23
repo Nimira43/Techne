@@ -80,6 +80,10 @@ window.addEventListener('load', function () {
       this.width = 50
       this.height = 50
     }
+    update() {
+      this.x++
+      this.y++
+    }
     
   }
 
