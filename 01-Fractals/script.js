@@ -13,12 +13,13 @@ window.addEventListener('load', function () {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
-      this.size = this.canvasWidth * 0.2    // Change
-      this.sides = 6                       // Change
-      this.maxLevel = 3                     // Change
-      this.scale = 0.5                     // Change
-      this.spread = 1                       // Change 
+      this.size = this.canvasWidth * 0.3  // Change
+      this.sides = 6                      // Change
+      this.maxLevel = 3                   // Change
+      this.scale = 0.5                    // Change
+      this.spread = 1                     // Change 
       this.branches = 2                   // Change
+      this.colour = 'hsl(16, 100%, 50%)'
     }
 
     draw(context) {
