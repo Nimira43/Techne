@@ -94,10 +94,12 @@ window.addEventListener('load', function () {
       this.angle = 0
 
       // Change Velocity of Angle
-      this.velocityOfAngle = 0.01
+      // Default value - 0.01 - 0.005
+      this.velocityOfAngle = Math.random() * 0.01 - 0.005
     }
 
     update() {
+      this.angle += this.velocityOfAngle
       this.x += this.speed
       if (this.x > this.canvasWidth + this.width) this.x = -this.width
       this.y += this.speed
@@ -108,7 +110,17 @@ window.addEventListener('load', function () {
       context.save()
       context.translate(this.x, this.y)
       context.rotate(this.angle)
-      context.drawImage(this.image, 0, 0, this.width, this.height)
+
+      // Change second and third parameters
+
+      context.drawImage(
+        this.image,
+        -this.width / 2,   // or just 0 
+        -this.height / 2,  // or just 0
+        this.width,
+        this.height
+      )
+
       context.restore()
     }
   }
@@ -121,6 +133,7 @@ window.addEventListener('load', function () {
 
       // Change number of prticles
       this.numberOfParticles = 40
+
       this.particles = []
       this.#initialise()
     }
