@@ -27,5 +27,7 @@ section {
 }
 
 .pattern .face.face-2 {
-  
+  height: 100vh;
+  transform-origin: top;
+  transform: rotateX(70deg);
 }
