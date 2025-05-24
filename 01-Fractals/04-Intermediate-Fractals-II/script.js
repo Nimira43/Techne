@@ -68,10 +68,8 @@ window.addEventListener('load', function () {
   fractal1.draw(ctx)
 
   class Particle {
-
   }
 
   class Rain {
-
   }
 })

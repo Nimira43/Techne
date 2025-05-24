@@ -12,7 +12,6 @@ window.addEventListener('load', function () {
   ctx.shadowOffsetX = 5                     // Change
   ctx.shadowBlur = 10                       // Change
 
-
   class Fractal {
     constructor(canvasWidth, canvasHeight) {
       this.canvasHeight = canvasHeight
@@ -72,10 +71,8 @@ window.addEventListener('load', function () {
   fractal1.draw(ctx)
 
   class Particle {
-
   }
 
   class Rain {
-
   }
 })

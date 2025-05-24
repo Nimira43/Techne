@@ -16,8 +16,6 @@ window.addEventListener('load', function () {
   const ctx2 = canvas2.getContext('2d')
   canvas2.width = window.innerWidth
   canvas2.height = window.innerHeight
- 
-                 
 
   class Fractal {
     constructor(canvasWidth, canvasHeight) {
