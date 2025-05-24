@@ -13,7 +13,7 @@ window.addEventListener('load', function () {
   ctx.shadowBlur = 10                       
   
   const canvas2 = this.document.getElementById('canvas2')
-  const ctx2 = canvas.getContext('2d')
+  const ctx2 = canvas2.getContext('2d')
   canvas2.width = window.innerWidth
   canvas2.height = window.innerHeight
  
@@ -123,7 +123,7 @@ window.addEventListener('load', function () {
   console.log(rainEffect)
 
   function animate() {
-    rainEffect.run(ctx)
+    rainEffect.run(ctx2)
     requestAnimationFrame(animate)
   }
   animate()
