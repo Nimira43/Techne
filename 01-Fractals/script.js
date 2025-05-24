@@ -84,11 +84,11 @@ window.addEventListener('load', function () {
       this.sizeModifier = Math.random() * 0.5 + 0.1
       this.width = this.image.width * this.sizeModifier
       this.height = this.image.height * this.sizeModifier
-      this.speed = 1
+      this.speed = Math.random() * 1 + 0.2
     }
     update() {
-      this.x++
-      this.y++
+      this.x += this.speed
+      this.y += this.speed
     }
     draw(context) {
       context.drawImage(this.image, this.x, this.y, this.width, this.height)
