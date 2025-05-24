@@ -16,7 +16,16 @@ section {
   position: relative;
   transform-style: preserve-3d;
   perspective: 1000px;
-  
+  animation: animateBg 10s ease-in-out infinite;
+}
+
+@keyframes animateBg {
+  0%, 100% {
+    transform: scale(1.8) rotate(-15deg); 
+  }
+  50% {
+    transform: scale(2.0) rotate(15deg); 
+  }
 }
 
 .pattern .face {
