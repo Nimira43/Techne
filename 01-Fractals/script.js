@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
 
   ctx.lineWidth = 10                        
   ctx.lineCap = 'round'
-  ctx.fillStyle = '#ff45023'                  
+  ctx.fillStyle = '#ff45000'                  
   ctx.shadowColor = 'black'                 
   ctx.shadowOffsetY = 10                    
   ctx.shadowOffsetX = 5                     
@@ -22,8 +22,7 @@ window.addEventListener('load', function () {
       this.scale = 0.5                       
       this.spread = Math.random() * 2.8 + 0.1 
       this.branches = 2                       
-      this.colour =
-        'hsl(' + Math.random() * 360 + ', 100%, 50%)'
+      this.colour = 'hsl(' + Math.random() * 360 + ', 100%, 50%)'
     }
 
     draw(context) {
