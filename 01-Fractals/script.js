@@ -106,7 +106,10 @@ window.addEventListener('load', function () {
       if (this.y > this.canvasHeight + this.height) this.y = -this.height
     }
     draw(context) {
+      context.save()
+      context.translate(this.x, this.y)
       context.drawImage(this.image, this.x, this.y, this.width, this.height)
+      context.restore()
     }
   }
 
