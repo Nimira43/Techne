@@ -74,11 +74,6 @@ window.addEventListener('load', function () {
     }
   }
 
-  const fractal1 = new Fractal(canvas.width, canvas.height)
-  fractal1.draw(ctx)
-  const fractalImage = new Image()
-  fractalImage.src = canvas.toDataURL()
-
   class Particle {
     constructor(canvasWidth, canvasHeight) {
       this.canvasWidth = canvasWidth
@@ -121,13 +116,19 @@ window.addEventListener('load', function () {
     }
   }
 
-  const rainEffect = new Rain(canvas2.width, canvas2.height)
-  console.log(rainEffect)
+  const fractal1 = new Fractal(canvas.width, canvas.height)
+  fractal1.draw(ctx)
+  const fractalImage = new Image()
+  fractalImage.src = canvas.toDataURL()
 
-  function animate() {
-    ctx2.clearRect(0, 0, canvas2.width, canvas2.height)
-    rainEffect.run(ctx2)
-    requestAnimationFrame(animate)
+  fractalImage.onload = function () {
+    const rainEffect = new Rain(canvas2.width, canvas2.height)
+
+    function animate() {
+      ctx2.clearRect(0, 0, canvas2.width, canvas2.height)
+      rainEffect.run(ctx2)
+      requestAnimationFrame(animate)
+    }
+    animate()
   }
-  animate()
 })
