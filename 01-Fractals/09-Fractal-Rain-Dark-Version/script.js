@@ -91,13 +91,6 @@ window.addEventListener('load', function () {
 
       // Change Speed
       this.speed = Math.random() * 1 + 0.5
-
-      // Change Angle
-      this.angle = 0
-
-      // Change Velocity of Angle
-
-      this.velocityOfAngle = 0.01
     }
     update() {
       this.x += this.speed
