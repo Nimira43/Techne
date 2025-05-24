@@ -81,16 +81,15 @@ window.addEventListener('load', function () {
       this.image = image
       this.x = Math.random() * this.canvasWidth
       this.y = Math.random() * this.canvasHeight
-      this.width = 50
-      this.height = 50
+      this.width = 200
+      this.height = 200
     }
     update() {
       this.x++
       this.y++
     }
     draw(context) {
-      context.fillRect(this.x, this.y, this.width, this.height)
-      context.drawImage(this.image, this.x, this.y)
+      context.drawImage(this.image, this.x, this.y, this.width, this.height)
     }
   }
 
