@@ -16,6 +16,7 @@ section {
   position: relative;
   transform-style: preserve-3d;
   perspective: 1000px;
+  
 }
 
 .pattern .face {
@@ -24,6 +25,16 @@ section {
   height: 50vh;
   background: url('./images/bg.jpg');
   background-size: 100px 100px;
+  animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 
 .pattern .face.face-2 {
@@ -54,7 +65,7 @@ section {
   top: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.9),
     transparent
   )
 }
