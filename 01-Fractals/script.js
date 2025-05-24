@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
   // ctx.shadowBlur = 10
   // Change value below
 
-  ctx.lineWidth = 10                        
+  ctx.lineWidth = 2                      
   ctx.lineCap = 'round'
   ctx.fillStyle = '#ff45000'                  
   ctx.shadowColor = 'black'                 
@@ -43,11 +43,11 @@ window.addEventListener('load', function () {
       // Change values here
 
       this.size = this.canvasWidth * 0.26    
-      this.sides = 6                         
-      this.maxLevel = 5
-      this.scale = 0.55                       
-      this.spread = Math.random() * 2.8 + 0.1 
-      this.branches = 2                       
+      this.sides = 12                         
+      this.maxLevel = 4
+      this.scale = 0.45                       
+      this.spread = Math.random() * 1.8 + 0.1 
+      this.branches = 3                       
       this.colour = 'hsl(' + Math.random() * 360 + ', 100%, 50%)'
     }
 
@@ -101,14 +101,14 @@ window.addEventListener('load', function () {
 
       // Change Size Modifer
       // Default: 0.5 + 1
-      this.sizeModifier = Math.random() * 0.5 + 0.1
+      this.sizeModifier = Math.random() * 0.15 + 0.1
       
       this.width = this.image.width * this.sizeModifier
       this.height = this.image.height * this.sizeModifier
 
       // Change Speed
       // Default: 1 + 0.5
-      this.speed = Math.random() * 1 + 0.5
+      this.speed = Math.random() * 1 + 0.75
 
       // Change Angle
       // Default: 0
@@ -116,7 +116,7 @@ window.addEventListener('load', function () {
 
       // Change Velocity of Angle
       // Default: 0.01 - 0.005
-      this.velocityOfAngle = Math.random() * 0.01 - 0.005
+      this.velocityOfAngle = Math.random() * 0.01 - 0.105
     }
 
     update() {
@@ -132,6 +132,10 @@ window.addEventListener('load', function () {
       context.translate(this.x, this.y)
       context.rotate(this.angle)
 
+
+      // Default:
+      // -this.width / 2,   // or just 0 
+      // -this.height / 2,  // or just 0
       // Change second and third parameters
 
       context.drawImage(
@@ -154,7 +158,7 @@ window.addEventListener('load', function () {
 
       // Change number of particles 
       // Default Value: 10
-      this.numberOfParticles = 10
+      this.numberOfParticles = 60
 
       this.particles = []
       this.#initialise()
