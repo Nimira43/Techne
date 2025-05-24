@@ -44,13 +44,11 @@ window.addEventListener('load', function () {
         this.#drawLine(context, 0)
         context.rotate((Math.PI * 2) / this.sides)
       }
-   
       context.restore()
     }
     
     #drawLine(context, level) {
       if (level > this.maxLevel) return
-
       context.beginPath()
       context.moveTo(0, 0)
       context.lineTo(this.size, 0)
@@ -96,19 +94,21 @@ window.addEventListener('load', function () {
       this.angle = 0
 
       // Change Velocity of Angle
-
       this.velocityOfAngle = 0.01
     }
+
     update() {
       this.x += this.speed
       if (this.x > this.canvasWidth + this.width) this.x = -this.width
       this.y += this.speed
       if (this.y > this.canvasHeight + this.height) this.y = -this.height
     }
+
     draw(context) {
       context.save()
       context.translate(this.x, this.y)
-      context.drawImage(this.image, this.x, this.y, this.width, this.height)
+      context.rotate(this.angle)
+      context.drawImage(this.image, 0, 0, this.width, this.height)
       context.restore()
     }
   }
@@ -124,6 +124,7 @@ window.addEventListener('load', function () {
       this.particles = []
       this.#initialise()
     }
+
     #initialise() {
       for (let i = 0; i < this.numberOfParticles; i++) {
         this.particles.push(new Particle(
@@ -133,6 +134,7 @@ window.addEventListener('load', function () {
         ))
       }   
     }
+
     run(context) {
       this.particles.forEach(particle => {
         particle.draw(context)
@@ -143,6 +145,7 @@ window.addEventListener('load', function () {
 
   const fractal1 = new Fractal(canvas.width, canvas.height)
   fractal1.draw(ctx)
+  
   const fractalImage = new Image()
   fractalImage.src = canvas.toDataURL()
   fractalImage.onload = function () {
@@ -153,6 +156,7 @@ window.addEventListener('load', function () {
       rainEffect.run(ctx2)
       requestAnimationFrame(animate)
     }
+    
     animate()
   }
 })
