@@ -88,7 +88,11 @@ window.addEventListener('load', function () {
     }
     update() {
       this.x += this.speed
+      if (this.x > this.canvasWidth + this.width) this.x = -this.width
+
       this.y += this.speed
+      if (this.y > this.canvasHeight + this.height) this.y = -this.height
+    
     }
     draw(context) {
       context.drawImage(this.image, this.x, this.y, this.width, this.height)
