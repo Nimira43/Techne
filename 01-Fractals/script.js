@@ -81,9 +81,10 @@ window.addEventListener('load', function () {
       this.image = image
       this.x = Math.random() * this.canvasWidth
       this.y = Math.random() * this.canvasHeight
-      this.sizeModifier = Math.random() * 0.2 + 0.1
+      this.sizeModifier = Math.random() * 0.5 + 0.1
       this.width = this.image.width * this.sizeModifier
       this.height = this.image.height * this.sizeModifier
+      this.speed = 1
     }
     update() {
       this.x++
