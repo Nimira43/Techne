@@ -75,9 +75,10 @@ window.addEventListener('load', function () {
   }
 
   class Particle {
-    constructor(canvasWidth, canvasHeight) {
+    constructor(canvasWidth, canvasHeight, image) {
       this.canvasWidth = canvasWidth
       this.canvasHeight = canvasHeight
+      this.image = image
       this.x = Math.random() * this.canvasWidth
       this.y = Math.random() * this.canvasHeight
       this.width = 50
@@ -88,7 +89,8 @@ window.addEventListener('load', function () {
       this.y++
     }
     draw(context) {
-      context.fillRect(this.x, this.y, this.width, this.height) 
+      context.fillRect(this.x, this.y, this.width, this.height)
+      context.drawImage(this.image, this.x, this.y)
     }
   }
 
@@ -105,7 +107,8 @@ window.addEventListener('load', function () {
       for (let i = 0; i < this.numberOfParticles; i++) {
         this.particles.push(new Particle(
           this.canvasWidth,
-          this.canvasHeight
+          this.canvasHeight,
+          this.image
         ))
       }   
     }
