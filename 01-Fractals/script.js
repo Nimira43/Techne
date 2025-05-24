@@ -4,6 +4,16 @@ window.addEventListener('load', function () {
   canvas.width = 600
   canvas.height = 600
 
+  // Ctx Default Value:
+  // ctx.lineWidth = 10                        
+  // ctx.lineCap = 'round'
+  // ctx.fillStyle = '#ff45000'                  
+  // ctx.shadowColor = 'black'                 
+  // ctx.shadowOffsetY = 10                    
+  // ctx.shadowOffsetX = 5                     
+  // ctx.shadowBlur = 10
+  // Change value below
+
   ctx.lineWidth = 10                        
   ctx.lineCap = 'round'
   ctx.fillStyle = '#ff45000'                  
@@ -22,7 +32,15 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.canvasWidth = canvasWidth
 
-      // Change property values here
+      // Properties Default Values
+      // this.size = this.canvasWidth * 0.26    
+      // this.sides = 6                         
+      // this.maxLevel = 5
+      // this.scale = 0.55                       
+      // this.spread = Math.random() * 2.8 + 0.1 
+      // this.branches = 2                       
+      // this.colour = 'hsl(' + Math.random() * 360 + ', 100%, 50%)'
+      // Change values here
 
       this.size = this.canvasWidth * 0.26    
       this.sides = 6                         
@@ -81,20 +99,23 @@ window.addEventListener('load', function () {
       this.x = Math.random() * this.canvasWidth
       this.y = Math.random() * this.canvasHeight
 
-      // Change Modifer
+      // Change Size Modifer
+      // Default: 0.5 + 1
       this.sizeModifier = Math.random() * 0.5 + 0.1
       
       this.width = this.image.width * this.sizeModifier
       this.height = this.image.height * this.sizeModifier
 
       // Change Speed
+      // Default: 1 + 0.5
       this.speed = Math.random() * 1 + 0.5
 
       // Change Angle
+      // Default: 0
       this.angle = 0
 
       // Change Velocity of Angle
-      // Default value - 0.01 - 0.005
+      // Default: 0.01 - 0.005
       this.velocityOfAngle = Math.random() * 0.01 - 0.005
     }
 
@@ -131,8 +152,9 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.image = image
 
-      // Change number of prticles
-      this.numberOfParticles = 40
+      // Change number of particles 
+      // Default Value: 10
+      this.numberOfParticles = 10
 
       this.particles = []
       this.#initialise()
