@@ -11,6 +11,19 @@ window.addEventListener('load', function () {
   ctx.shadowOffsetY = 10                    
   ctx.shadowOffsetX = 5                     
   ctx.shadowBlur = 10                       
+  
+  const canvas2 = this.document.getElementById('canvas2')
+  const ctx2 = canvas.getContext('2d')
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
+ 
+  // ctx.lineWidth = 10                        
+  // ctx.lineCap = 'round'
+  // ctx.fillStyle = '#ff45000'                  
+  // ctx.shadowColor = 'black'                 
+  // ctx.shadowOffsetY = 10                    
+  // ctx.shadowOffsetX = 5                     
+  // ctx.shadowBlur = 10                       
 
   class Fractal {
     constructor(canvasWidth, canvasHeight) {
