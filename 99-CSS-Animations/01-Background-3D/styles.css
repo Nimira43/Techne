@@ -11,3 +11,9 @@ section {
   height: 100vh;
   overflow: hidden;
 }
+
+.pattern {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
