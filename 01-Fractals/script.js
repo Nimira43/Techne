@@ -76,6 +76,8 @@ window.addEventListener('load', function () {
 
   const fractal1 = new Fractal(canvas.width, canvas.height)
   fractal1.draw(ctx)
+  const fractalImage = new Image()
+  fractalImage.src = canvas.toDataURL()
 
   class Particle {
     constructor(canvasWidth, canvasHeight) {
