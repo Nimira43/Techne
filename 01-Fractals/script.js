@@ -43,16 +43,20 @@ window.addEventListener('load', function () {
       // Change values here
 
       this.size = this.canvasWidth * 0.26    
-      this.sides = 12                         
-      this.maxLevel = 4
-      this.scale = 0.45                       
-      this.spread = Math.random() * 1.8 + 0.1 
-      this.branches = 3                       
+      this.sides = 6                         
+      this.maxLevel = 5
+      this.scale = 0.55                       
+      this.spread = Math.random() * 2.8 + 0.1 
+      this.branches = 2                       
       this.colour = 'hsl(' + Math.random() * 360 + ', 100%, 50%)'
     }
 
     draw(context) {
       context.strokeStyle = this.colour
+
+      //Circular code - turn on/off with lines 78-80
+      // context.fillStyle = this.colour 
+
       context.save()
       context.translate(this.canvasWidth / 2, this.canvasHeight / 2)
       context.scale(1, 1)
@@ -71,6 +75,13 @@ window.addEventListener('load', function () {
       context.moveTo(0, 0)
       context.lineTo(this.size, 0)
       context.stroke()
+
+      // Turn on/off Circular code
+      // context.beginPath()
+      // context.arc(this.size * 1.5, 0, 50, 0, Math.PI * 2)
+      // context.stroke()
+      // context.fill()
+      // End of Circular code
 
       for (let i = 0; i < this.branches; i++) {
         context.save()  
@@ -101,14 +112,14 @@ window.addEventListener('load', function () {
 
       // Change Size Modifer
       // Default: 0.5 + 1
-      this.sizeModifier = Math.random() * 0.15 + 0.1
+      this.sizeModifier = Math.random() * 0.5 + 0.1
       
       this.width = this.image.width * this.sizeModifier
       this.height = this.image.height * this.sizeModifier
 
       // Change Speed
       // Default: 1 + 0.5
-      this.speed = Math.random() * 1 + 0.75
+      this.speed = Math.random() * 1 + 0.85
 
       // Change Angle
       // Default: 0
@@ -116,7 +127,7 @@ window.addEventListener('load', function () {
 
       // Change Velocity of Angle
       // Default: 0.01 - 0.005
-      this.velocityOfAngle = Math.random() * 0.01 - 0.105
+      this.velocityOfAngle = Math.random() * 0.03 - 0.105
     }
 
     update() {
