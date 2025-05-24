@@ -93,9 +93,10 @@ window.addEventListener('load', function () {
   }
 
   class Rain {
-    constructor(canvasWidth, canvasHeight) {
+    constructor(canvasWidth, canvasHeight, image) {
       this.canvasWidth = canvasWidth
       this.canvasHeight = canvasHeight
+      this.image = image
       this.numberOfParticles = 20
       this.particles = []
       this.#initialise()
@@ -122,7 +123,7 @@ window.addEventListener('load', function () {
   fractalImage.src = canvas.toDataURL()
 
   fractalImage.onload = function () {
-    const rainEffect = new Rain(canvas2.width, canvas2.height)
+    const rainEffect = new Rain(canvas2.width, canvas2.height, fractalImage)
 
     function animate() {
       ctx2.clearRect(0, 0, canvas2.width, canvas2.height)
