@@ -13,10 +13,8 @@ window.addEventListener('load', function () {
   }
 
   class Effect {
-
   }
 
   function animate() {
-
   }
 })
