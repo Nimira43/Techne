@@ -49,17 +49,18 @@ window.addEventListener('load', function () {
       let words = text.split(' ')
       let lineCounter = 0
       let line = ''
-      
-      //   
-      //   
-      //   for (let i = 0; i < words.length; i++) {
-      //     let testLine = line + words[i] + ' '
-      //     if (ctx.measureText(testLine).width > maxTextWidth) {
-      //       line = words[i] + ' '
-      //       lineCounter++
-      //     } else {
-      //       line = testLine
-      //     }
+
+      for (let i = 0; i < words.length; i++) {
+        let testLine = line + words[i] + ' '
+        if (this.context.measureText(testLine).width > maxTextWidth) {
+          line = words[i] + ' '
+          lineCounter++
+        } else {
+          line = testLine
+        }
+      }
+    }
+             
       //     linesArray[lineCounter] = line 
       //   }
       //   let textHeight = lineHeight * lineCounter
@@ -73,7 +74,7 @@ window.addEventListener('load', function () {
       //   ctx.clearRect(0, 0, canvas.width, canvas.height)
       //   wrapText(e.target.value)
       // })
-    }
+    
     convertToParticles() {
 
     }
