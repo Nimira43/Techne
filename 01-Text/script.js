@@ -35,6 +35,8 @@ window.addEventListener('load', function () {
       gradient.addColorStop(0.5, '#ff4500')
       gradient.addColorStop(0.7, '#ff0000')
       this.context.fillStyle = gradient
+      ctx.textAlign = 'center'
+      ctx.textBaseline = 'middle'
       this.context.font = this.fontSize + 'px Verdana'
       this.context.fillText(text, this.textX, this.textY)
     }
@@ -69,8 +71,7 @@ window.addEventListener('load', function () {
 
   // ctx.strokeStyle = '#ffd700'
   // ctx.font = '80px Helvetica'
-  // ctx.textAlign = 'center'
-  // ctx.textBaseline = 'middle'
+  // 
   
   // const maxTextWidth = canvas.width * 0.8
   // const lineHeight = 80
