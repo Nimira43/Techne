@@ -39,10 +39,11 @@ window.addEventListener('load', function () {
       } else {
         line = testLine
       }
-      linesArray[lineCounter] = line
-      // ctx.fillText(testLine, canvas.width / 2 , canvas.height / 2 + i * 70)
+      linesArray[lineCounter] = line 
     }
-    linesArray.forEach()
+    linesArray.forEach((el, index) => {
+      ctx.fillText(el, canvas.width / 2 , canvas.height / 2 + index * 70)
+    })
   }
   
   wrapText('This project explores the power of Vanilla JavaScript to create elegant, dynamic text animations. With no external libraries, it showcases how pure code can bring words to life on screen.')
