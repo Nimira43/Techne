@@ -25,6 +25,7 @@ window.addEventListener('load', function () {
   
   ctx.font = '80px Verdana'
   ctx.textAlign = 'center'
+  textBaseline = 'top'
   ctx.fillText(text, textX, textY)
   ctx.strokeText(text, textX, textY)
 })
