@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.textX = this.canvasWidth / 2
       this.textY = this.canvasHeight / 2
-      this.fontSize = 80
+      this.fontSize = 100
     }
     wrapText(text) {
       const gradient = this.context.createLinearGradient(
@@ -37,9 +37,11 @@ window.addEventListener('load', function () {
       this.context.fillStyle = gradient
       this.context.textAlign = 'center'
       this.context.textBaseline = 'middle'
-      this.context.strokeStyle = '#ffd700'
+      this.context.lineWidth = 3
+      this.context.strokeStyle = '#0000ff'
       this.context.font = this.fontSize + 'px Verdana'
       this.context.fillText(text, this.textX, this.textY)
+      this.context.strokeText(text, this.textX, this.textY)
     }
     convertToParticles() {
 
@@ -57,7 +59,7 @@ window.addEventListener('load', function () {
 
   }
 
-  // 
+
   // const maxTextWidth = canvas.width * 0.8
   // const lineHeight = 80
 
