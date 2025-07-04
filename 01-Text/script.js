@@ -17,18 +17,12 @@ window.addEventListener('load', function () {
   ctx.lineTo(canvas.width, canvas.height / 2)
   ctx.stroke()
 
-  const text = 'This project explores the power of Vanilla JavaScript to create elegant, dynamic text animations. With no external libraries, it showcases how pure code can bring words to life on screen.'
-  const textX = canvas.width / 2
-  const textY = canvas.height / 2
   ctx.fillStyle = '#ff4500'
   ctx.strokeStyle = '#ffd700'
-  
   ctx.font = '80px Verdana'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
-  ctx.fillText(text, textX, textY)
-  ctx.strokeText(text, textX, textY)
-
+  
   function wrapText(text) {
     let linesArray = []
     let linesCounter = 0
@@ -37,6 +31,13 @@ window.addEventListener('load', function () {
 
     for (let i = 0; i < words.length; i++) {
       let testLine = line + words[i] + ' '
+      console.log(ctx.measureText(testLine).width)
+      ctx.fillText(testLine, canvas.width / 2 , canvas.height / 2)
     }
-  } 
+    
+  }
+  
+  wrapText('NimiraTech')
 })
+
+// const text = 'This project explores the power of Vanilla JavaScript to create elegant, dynamic text animations. With no external libraries, it showcases how pure code can bring words to life on screen.'
