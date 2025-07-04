@@ -23,6 +23,8 @@ window.addEventListener('load', function () {
       this.context = context
       this.canvasWidth = canvasWidth
       this.canvasHeight = canvasHeight
+      this.textX = this.canvasWidth / 2
+      this.textY = this.canvasHeight / 2
     }
     wrapText(text) {
       this.context.fillText(text, x, y)
