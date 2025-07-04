@@ -53,6 +53,7 @@ window.addEventListener('load', function () {
   }
 
   textInput.addEventListener('keyup', function(e) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
     wrapText(e.target.value)
   })
 })
