@@ -18,6 +18,7 @@ window.addEventListener('load', function () {
   ctx.strokeStyle = '#ffd700'
   
   ctx.font = '80px Verdana'
+  ctx.textAlign = 'end'
   ctx.fillText(text, textX, textY)
   ctx.strokeText(text, textX, textY)
 })
