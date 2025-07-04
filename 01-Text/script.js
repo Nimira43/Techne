@@ -25,11 +25,11 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.textX = this.canvasWidth / 2
       this.textY = this.canvasHeight / 2
-      this.fontSize = 100
+      this.fontSize = 80
     }
     wrapText(text) {
       const gradient = this.context.createLinearGradient(
-        0 , 0, canvas.width, canvas.height
+        0, 0, this.canvasWidth, this.canvasHeight
       )
       gradient.addColorStop(0.3, '#ffd700')
       gradient.addColorStop(0.5, '#ff4500')
