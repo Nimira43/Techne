@@ -44,6 +44,33 @@ window.addEventListener('load', function () {
       this.context.font = this.fontSize + 'px Verdana'
       this.context.fillText(text, this.textX, this.textY)
       this.context.strokeText(text, this.textX, this.textY)
+
+      let linesArray = []
+      let words = text.split(' ')
+      
+      //   let lineCounter = 0
+      //   let line = ''
+      //   for (let i = 0; i < words.length; i++) {
+      //     let testLine = line + words[i] + ' '
+      //     if (ctx.measureText(testLine).width > maxTextWidth) {
+      //       line = words[i] + ' '
+      //       lineCounter++
+      //     } else {
+      //       line = testLine
+      //     }
+      //     linesArray[lineCounter] = line 
+      //   }
+      //   let textHeight = lineHeight * lineCounter
+      //   let textY = canvas.height / 2 - textHeight / 2
+      //   linesArray.forEach((el, index) => {
+      //     ctx.fillText(el, canvas.width / 2, textY + (index * lineHeight))
+      //   })
+      //   console.log(linesArray)
+      // }
+      // textInput.addEventListener('keyup', function(e) {
+      //   ctx.clearRect(0, 0, canvas.width, canvas.height)
+      //   wrapText(e.target.value)
+      // })
     }
     convertToParticles() {
 
@@ -59,38 +86,6 @@ window.addEventListener('load', function () {
 
   function animate() {
 
-  }
-
-
-  // 
-
-  // function wrapText(text) {
-  //   let linesArray = []
-  //   let lineCounter = 0
-  //   let line = ''
-  //   let words = text.split(' ')
-
-  //   for (let i = 0; i < words.length; i++) {
-  //     let testLine = line + words[i] + ' '
-  //     if (ctx.measureText(testLine).width > maxTextWidth) {
-  //       line = words[i] + ' '
-  //       lineCounter++
-  //     } else {
-  //       line = testLine
-  //     }
-  //     linesArray[lineCounter] = line 
-  //   }
-  //   let textHeight = lineHeight * lineCounter
-  //   let textY = canvas.height / 2 - textHeight / 2
-  //   linesArray.forEach((el, index) => {
-  //     ctx.fillText(el, canvas.width / 2, textY + (index * lineHeight))
-  //   })
-  //   console.log(linesArray)
-  // }
-
-  // textInput.addEventListener('keyup', function(e) {
-  //   ctx.clearRect(0, 0, canvas.width, canvas.height)
-  //   wrapText(e.target.value)
-  // })
+  }  
 })
 
