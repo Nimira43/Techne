@@ -27,7 +27,7 @@ window.addEventListener('load', function () {
       this.textY = this.canvasHeight / 2
     }
     wrapText(text) {
-      this.context.fillText(text, x, y)
+      this.context.fillText(text, this.textX, this.textY)
     }
     convertToParticles() {
 
