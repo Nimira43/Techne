@@ -25,15 +25,17 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.textX = this.canvasWidth / 2
       this.textY = this.canvasHeight / 2
+      this.fontSize = 100
     }
     wrapText(text) {
-      const gradient = ctx.createLinearGradient(
+      const gradient = this.context.createLinearGradient(
         0 , 0, canvas.width, canvas.height
       )
       gradient.addColorStop(0.3, '#ffd700')
       gradient.addColorStop(0.5, '#ff4500')
       gradient.addColorStop(0.7, '#ff0000')
-      ctx.fillStyle = gradient
+      this.context.fillStyle = gradient
+      this.context.font = this.fontSize + 'px Verdana'
       this.context.fillText(text, this.textX, this.textY)
     }
     convertToParticles() {
