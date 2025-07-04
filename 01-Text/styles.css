@@ -1,17 +1,16 @@
 * {
-  margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #000;
+  margin: 0;
 }
 
 #canvas1 {
+  background: #000;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 1px solid #ff4500;
+  top: 0;
+  left: 0;
+}
+
+input {
+  position: absolute;
+  width: 100%;
 }
