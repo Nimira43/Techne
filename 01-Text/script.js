@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
   ctx.lineTo(canvas.width, canvas.height / 2)
   ctx.stroke()
 
-  const text = 'NimiraTech'
+  const text = 'NimyraTech'
   const textX = canvas.width / 2
   const textY = canvas.height / 2
   ctx.fillStyle = '#ff4500'
@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
   
   ctx.font = '80px Verdana'
   ctx.textAlign = 'center'
-  textBaseline = 'top'
+  ctx.textBaseline = 'top'
   ctx.fillText(text, textX, textY)
   ctx.strokeText(text, textX, textY)
 })
