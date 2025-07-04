@@ -6,8 +6,8 @@ window.addEventListener('load', function () {
   canvas.height = window.innerHeight 
 
   const text = 'Text Animations'
-  const textX = 150
-  const textY = 150
+  const textX = canvas.width / 2
+  const textY = canvas.height / 2
   ctx.fillStyle = '#ff4500'
   ctx.strokeStyle = '#ffd700'
   ctx.lineWidth = 3
