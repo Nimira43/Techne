@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
   ctx.lineTo(canvas.width, canvas.height / 2)
   ctx.stroke()
 
-  const text = 'NimyraTech'
+  const text = 'Working with text using Canvas'
   const textX = canvas.width / 2
   const textY = canvas.height / 2
   ctx.fillStyle = '#ff4500'
@@ -25,7 +25,14 @@ window.addEventListener('load', function () {
   
   ctx.font = '80px Verdana'
   ctx.textAlign = 'center'
-  ctx.textBaseline = 'top'
+  ctx.textBaseline = 'middle'
   ctx.fillText(text, textX, textY)
   ctx.strokeText(text, textX, textY)
+
+  function wrapText(text) {
+    let linesArray = []
+    let linesCounter = 0
+    let line = ''
+    let words = text.split(' ')
+  } 
 })
