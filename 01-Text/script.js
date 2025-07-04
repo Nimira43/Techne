@@ -20,7 +20,9 @@ window.addEventListener('load', function () {
   
   class Effect {
     constructor(context, canvasWidth, canvasHeight) {
-      
+      this.context = context
+      this.canvasWidth = canvasWidth
+      this.canvasHeight = canvasHeight
     }
     wrapText(text) {
 
