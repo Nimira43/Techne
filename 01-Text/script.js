@@ -17,6 +17,25 @@ window.addEventListener('load', function () {
       
     }
   }
+  
+  class Effect {
+    constructor() {
+
+    }
+    wrapText(text) {
+
+    }
+    convertToParticles() {
+
+    }
+    render() {
+
+    }
+  }
+
+  function animate() {
+    
+  }
 
   // ctx.lineWidth = 3
   // ctx.strokeStyle = '#006400' 
