@@ -36,8 +36,10 @@ window.addEventListener('load', function () {
       if (ctx.measureText(testLine).width > maxTextWidth) {
         line = words[i] + ' '
         lineCounter++
+      } else {
+        line = testLine
       }
-      
+      linesArray[lineCounter] = line
       ctx.fillText(testLine, canvas.width / 2 , canvas.height / 2 + i * 70)
     }
   }
