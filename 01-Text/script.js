@@ -34,5 +34,9 @@ window.addEventListener('load', function () {
     let linesCounter = 0
     let line = ''
     let words = text.split(' ')
+
+    for (let i = 0; i < words.length; i++) {
+      let testLine = line + words[i] + ' '
+    }
   } 
 })
