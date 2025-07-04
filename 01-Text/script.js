@@ -37,7 +37,6 @@ window.addEventListener('load', function () {
     
   }
   
-  wrapText('NimiraTech')
+  wrapText('This project explores the power of Vanilla JavaScript to create elegant, dynamic text animations. With no external libraries, it showcases how pure code can bring words to life on screen.')
 })
 
-// const text = 'This project explores the power of Vanilla JavaScript to create elegant, dynamic text animations. With no external libraries, it showcases how pure code can bring words to life on screen.'
