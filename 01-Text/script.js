@@ -27,6 +27,13 @@ window.addEventListener('load', function () {
       this.textY = this.canvasHeight / 2
     }
     wrapText(text) {
+      const gradient = ctx.createLinearGradient(
+        0 , 0, canvas.width, canvas.height
+      )
+      gradient.addColorStop(0.3, '#ffd700')
+      gradient.addColorStop(0.5, '#ff4500')
+      gradient.addColorStop(0.7, '#ff0000')
+      ctx.fillStyle = gradient
       this.context.fillText(text, this.textX, this.textY)
     }
     convertToParticles() {
@@ -38,7 +45,7 @@ window.addEventListener('load', function () {
   }
 
   const effect = new Effect(ctx, canvas.width, canvas.height)
-
+  effect.wrapText('NimiraTech')
   console.log(effect)
 
   function animate() {
@@ -58,13 +65,6 @@ window.addEventListener('load', function () {
   // ctx.lineTo(canvas.width, canvas.height / 2)
   // ctx.stroke()
 
-  // const gradient = ctx.createLinearGradient(
-  //   0, 0, canvas.width, canvas.height
-  // )
-  // gradient.addColorStop(0.3, '#ffd700')
-  // gradient.addColorStop(0.5, '#ff4500')
-  // gradient.addColorStop(0.7, '#ff0000')
-  // ctx.fillStyle = gradient
   // ctx.strokeStyle = '#ffd700'
   // ctx.font = '80px Helvetica'
   // ctx.textAlign = 'center'
