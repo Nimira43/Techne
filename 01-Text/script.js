@@ -32,9 +32,8 @@ window.addEventListener('load', function () {
     for (let i = 0; i < words.length; i++) {
       let testLine = line + words[i] + ' '
       console.log(ctx.measureText(testLine).width)
-      ctx.fillText(testLine, canvas.width / 2 , canvas.height / 2)
+      ctx.fillText(testLine, canvas.width / 2 , canvas.height / 2 + i * 70)
     }
-    
   }
   
   wrapText('This project explores the power of Vanilla JavaScript to create elegant, dynamic text animations. With no external libraries, it showcases how pure code can bring words to life on screen.')
