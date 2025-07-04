@@ -56,19 +56,6 @@ window.addEventListener('load', function () {
 
   }
 
-  // ctx.lineWidth = 3
-  // ctx.strokeStyle = '#006400' 
-  // ctx.beginPath()
-  // ctx.moveTo(canvas.width / 2, 0)
-  // ctx.lineTo(canvas.width / 2, canvas.height)
-  // ctx.stroke()
-  
-  // ctx.strokeStyle = '#006400' 
-  // ctx.beginPath()
-  // ctx.moveTo(0, canvas.height / 2)
-  // ctx.lineTo(canvas.width, canvas.height / 2)
-  // ctx.stroke()
-
   // ctx.strokeStyle = '#ffd700'
   // ctx.font = '80px Helvetica'
   // 
