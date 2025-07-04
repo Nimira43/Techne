@@ -51,11 +51,9 @@ window.addEventListener('load', function () {
     })
     console.log(linesArray)
   }
-  
-  // wrapText('This project explores the power of Vanilla JavaScript to create elegant, dynamic text animations. With no external libraries, it showcases how pure code can bring words to life on screen.')
 
   textInput.addEventListener('keyup', function(e) {
-    console.log(e)
+    wrapText(e.target.value)
   })
 })
 
