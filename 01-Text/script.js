@@ -57,9 +57,6 @@ window.addEventListener('load', function () {
   }
 
   // ctx.strokeStyle = '#ffd700'
-  // ctx.font = '80px Helvetica'
-  // 
-  
   // const maxTextWidth = canvas.width * 0.8
   // const lineHeight = 80
 
