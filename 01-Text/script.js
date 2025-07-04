@@ -19,6 +19,9 @@ window.addEventListener('load', function () {
   ctx.lineTo(canvas.width, canvas.height / 2)
   ctx.stroke()
 
+  const gradient = ctx.createLinearGradient(
+    0, 0, canvas.width, canvas.height
+  )
   ctx.fillStyle = '#ff4500'
   ctx.strokeStyle = '#ffd700'
   ctx.font = '80px Helvetica'
