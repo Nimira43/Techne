@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
   ctx.fillStyle = '#ff4500'
   ctx.strokeStyle = '#ffd700'
   ctx.lineWidth = 3
-  ctx.font = '80px Helvetica'
+  ctx.font = '80px Verdana'
   ctx.fillText(text, textX, textY)
   ctx.strokeText(text, textX, textY)
 })
