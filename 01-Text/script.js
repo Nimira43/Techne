@@ -7,8 +7,8 @@ window.addEventListener('load', function () {
   ctx.lineWidth = 3
   ctx.strokeStyle = '#fff' 
   ctx.beginPath()
-  ctx.moveTo(100, 100)
-  ctx.lineTo(200, 300)
+  ctx.moveTo(canvas.width / 2, 0)
+  ctx.lineTo(canvas.width / 2, canvas.height)
   ctx.stroke()
 
   const text = 'Text Animations'
