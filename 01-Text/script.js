@@ -27,13 +27,17 @@ window.addEventListener('load', function () {
 
   function wrapText(text) {
     let linesArray = []
-    let linesCounter = 0
+    let lineCounter = 0
     let line = ''
     let words = text.split(' ')
 
     for (let i = 0; i < words.length; i++) {
       let testLine = line + words[i] + ' '
-      console.log(ctx.measureText(testLine).width)
+      if (ctx.measureText(testLine).width > maxTextWidth) {
+        line = words[i] + ' '
+        lineCounter++
+      }
+      
       ctx.fillText(testLine, canvas.width / 2 , canvas.height / 2 + i * 70)
     }
   }
