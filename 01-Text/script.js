@@ -37,6 +37,8 @@ window.addEventListener('load', function () {
     }
   }
 
+  const effect = new Effect()
+
   function animate() {
 
   }
