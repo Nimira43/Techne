@@ -44,6 +44,7 @@ window.addEventListener('load', function () {
     linesArray.forEach((el, index) => {
       ctx.fillText(el, canvas.width / 2 , canvas.height / 2 + index * 70)
     })
+    console.log(linesArray)
   }
   
   wrapText('This project explores the power of Vanilla JavaScript to create elegant, dynamic text animations. With no external libraries, it showcases how pure code can bring words to life on screen.')
