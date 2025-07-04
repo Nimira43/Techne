@@ -13,7 +13,7 @@ window.addEventListener('load', function () {
   
   ctx.strokeStyle = '#006400' 
   ctx.beginPath()
-  ctx.moveTo(0, canvas.width / 2)
+  ctx.moveTo(0, canvas.height / 2)
   ctx.lineTo(canvas.width, canvas.height / 2)
   ctx.stroke()
 
