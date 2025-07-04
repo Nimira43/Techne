@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
   gradient.addColorStop(0.3, '#ffd700')
   gradient.addColorStop(0.5, '#ff4500')
   gradient.addColorStop(0.7, '#ff0000')
-  ctx.fillStyle = '#ff4500'
+  ctx.fillStyle = gradient
   ctx.strokeStyle = '#ffd700'
   ctx.font = '80px Helvetica'
   ctx.textAlign = 'center'
