@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
   
-  const maxTextWidth = canvas.width * 0.5
+  const maxTextWidth = canvas.width * 0.8
 
   function wrapText(text) {
     let linesArray = []
