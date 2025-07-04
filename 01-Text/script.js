@@ -35,8 +35,8 @@ window.addEventListener('load', function () {
       gradient.addColorStop(0.5, '#ff4500')
       gradient.addColorStop(0.7, '#ff0000')
       this.context.fillStyle = gradient
-      ctx.textAlign = 'center'
-      ctx.textBaseline = 'middle'
+      this.context.textAlign = 'center'
+      this.context.textBaseline = 'middle'
       this.context.font = this.fontSize + 'px Verdana'
       this.context.fillText(text, this.textX, this.textY)
     }
