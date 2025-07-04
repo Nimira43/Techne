@@ -47,9 +47,11 @@ window.addEventListener('load', function () {
 
       let linesArray = []
       let words = text.split(' ')
+      let lineCounter = 0
+      let line = ''
       
-      //   let lineCounter = 0
-      //   let line = ''
+      //   
+      //   
       //   for (let i = 0; i < words.length; i++) {
       //     let testLine = line + words[i] + ' '
       //     if (ctx.measureText(testLine).width > maxTextWidth) {
