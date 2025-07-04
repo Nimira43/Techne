@@ -22,6 +22,9 @@ window.addEventListener('load', function () {
   const gradient = ctx.createLinearGradient(
     0, 0, canvas.width, canvas.height
   )
+  gradient.addColorStop(0.3, '#ffd700')
+  gradient.addColorStop(0.5, '#ff4500')
+  gradient.addColorStop(0.7, '#ff0000')
   ctx.fillStyle = '#ff4500'
   ctx.strokeStyle = '#ffd700'
   ctx.font = '80px Helvetica'
