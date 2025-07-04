@@ -19,11 +19,12 @@ window.addEventListener('load', function () {
 
   ctx.fillStyle = '#ff4500'
   ctx.strokeStyle = '#ffd700'
-  ctx.font = '80px Verdana'
+  ctx.font = '80px Helvetica'
   ctx.textAlign = 'center'
   ctx.textBaseline = 'middle'
   
   const maxTextWidth = canvas.width * 0.8
+  const lineHeight = 80
 
   function wrapText(text) {
     let linesArray = []
@@ -41,6 +42,7 @@ window.addEventListener('load', function () {
       }
       linesArray[lineCounter] = line 
     }
+    let textHeight
     linesArray.forEach((el, index) => {
       ctx.fillText(el, canvas.width / 2 , canvas.height / 2 + index * 70)
     })
