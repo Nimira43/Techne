@@ -37,7 +37,9 @@ window.addEventListener('load', function () {
     }
   }
 
-  const effect = new Effect(ctx, canvasWidth, canvasHeight)
+  const effect = new Effect(ctx, canvas.width, canvas.height)
+
+  console.log(effect)
 
   function animate() {
 
