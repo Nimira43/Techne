@@ -17,7 +17,7 @@ input {
   position: absolute;
   font-family: 'VT323', monospace;
   background-color: #000;
-  color: #006400;
+  color: #0bd40b;
   border: 4px solid #006400;
   font-size: 20px;
   width: calc(100% - 20px);
@@ -28,5 +28,5 @@ input {
 }
 
 input::placeholder {
-  color: #19f519;
+  color: #2b6d2b;
 }
