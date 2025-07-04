@@ -26,8 +26,8 @@ window.addEventListener('load', function () {
       this.textX = this.canvasWidth / 2
       this.textY = this.canvasHeight / 2
       this.fontSize = 100
-      const maxTextWidth = canvas.width * 0.8
-  // const lineHeight = 80
+      this.lineHeight = this.fontSize * 8
+      this.maxTextWidth = this.canvasWidth * 0.8
     }
     wrapText(text) {
       const gradient = this.context.createLinearGradient(
