@@ -4,6 +4,7 @@ window.addEventListener('load', function () {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight 
 
+  ctx.lineWidth = 3
   ctx.strokeStyle = '#fff' 
   ctx.beginPath()
   ctx.moveTo(100, 100)
@@ -15,7 +16,7 @@ window.addEventListener('load', function () {
   const textY = canvas.height / 2
   ctx.fillStyle = '#ff4500'
   ctx.strokeStyle = '#ffd700'
-  ctx.lineWidth = 3
+  
   ctx.font = '80px Verdana'
   ctx.fillText(text, textX, textY)
   ctx.strokeText(text, textX, textY)
