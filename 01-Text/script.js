@@ -17,7 +17,7 @@ window.addEventListener('load', function () {
   ctx.lineTo(canvas.width, canvas.height / 2)
   ctx.stroke()
 
-  const text = 'Working with text using Canvas'
+  const text = 'This project explores the power of Vanilla JavaScript to create elegant, dynamic text animations. With no external libraries, it showcases how pure code can bring words to life on screen.'
   const textX = canvas.width / 2
   const textY = canvas.height / 2
   ctx.fillStyle = '#ff4500'
