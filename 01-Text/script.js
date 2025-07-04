@@ -42,9 +42,10 @@ window.addEventListener('load', function () {
       }
       linesArray[lineCounter] = line 
     }
-    let textHeight
+    let textHeight = lineHeight * lineCounter
+    let textY = canvas.height / 2 - textHeight / 2
     linesArray.forEach((el, index) => {
-      ctx.fillText(el, canvas.width / 2 , canvas.height / 2 + index * 70)
+      ctx.fillText(el, canvas.width / 2 ,  + index * 70)
     })
     console.log(linesArray)
   }
