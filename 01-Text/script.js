@@ -19,8 +19,8 @@ window.addEventListener('load', function () {
   }
   
   class Effect {
-    constructor() {
-
+    constructor(context, canvasWidth, canvasHeight) {
+      
     }
     wrapText(text) {
 
@@ -34,7 +34,7 @@ window.addEventListener('load', function () {
   }
 
   function animate() {
-    
+
   }
 
   // ctx.lineWidth = 3
