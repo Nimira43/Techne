@@ -33,9 +33,15 @@ window.addEventListener('load', function () {
       this.distance = this.dx * this.dx + this.dy * this.dy
       this.force = -this.effect.mouse.radius / this.distance
       
-      
-      this.x += (this.originX - this.x) * this.ease
-      this.y += (this.originY - this.y) * this.ease
+      if (this.distance < this.effect.mouse.radius) {
+        this.angle = Math.atan2(this.dy, this.dx)
+        this.vx += this.force * Math.cos(this.angle)
+        this.vy += this.force * Math.sin(this.angle)
+      }
+
+
+      this.x += (this.vx *= this.friction) + (this.originX - this.x) * this.ease
+      this.y += (this.vy *= this.friction) + (this.originY - this.y) * this.ease
     }
   }
   
@@ -73,14 +79,15 @@ window.addEventListener('load', function () {
         0, 0, this.canvasWidth, this.canvasHeight
       )
       gradient.addColorStop(0.3, '#ffd700')
-      gradient.addColorStop(0.5, '#ff4500')
-      gradient.addColorStop(0.7, '#ff0000')
+      gradient.addColorStop(0.5, '#ff8c00')
+      gradient.addColorStop(0.7, '#ff4500')
       
       this.context.fillStyle = gradient
       this.context.textAlign = 'center'
       this.context.textBaseline = 'middle'
       this.context.lineWidth = 3
-      this.context.strokeStyle = '#0000ff'
+      this.context.strokeStyle = '#ff0000'
+      this.letterSpacing = '5px'
       this.context.font = this.fontSize + 'px Verdana'
        
       let linesArray = []
