@@ -103,6 +103,7 @@ window.addEventListener('load', function () {
     convertToParticles() {
       this.particles = []
       const pixels = this.context.getImageData(0, 0, this.canvasWidth, this.canvasHeight).data
+      this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
       for (let y = 0; y < this.canvasHeight; y += this.gap) {
         for (let x = 0; x < this.canvasWidth; x += this.gap) {
           const index = (y * this.canvasWidth + x) * 4
