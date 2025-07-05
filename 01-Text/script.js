@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
       this.colour = colour
       this.originX = x
       this.originY = y
-      this.size = this.effect.gap + 9  // Change this - default: this.effect.gap
+      this.size = this.effect.gap + 1 // Change this - default: this.effect.gap
       this.dx = 0
       this.dy = 0
       this.vx = 0
@@ -50,7 +50,7 @@ window.addEventListener('load', function () {
         }
       })
       this.particles = []
-      this.gap = 3   // Change this - default: 3
+      this.gap = 6   // Change this - default: 3
       this.mouse = {
         radius: 20000,
         x: 0,
