@@ -30,7 +30,10 @@ window.addEventListener('load', function () {
     update() {
       this.dx = this.effect.mouse.x - this.x
       this.dy  = this.effect.mouse.y - this.y
-      this.distance = Math.sqrt(this.dx * this.dx + this.dy * this.dy)
+      this.distance = this.dx * this.dx + this.dy * this.dy
+      this.force = -this.effect.mouse.radius / this.distance
+      
+      
       this.x += (this.originX - this.x) * this.ease
       this.y += (this.originY - this.y) * this.ease
     }
