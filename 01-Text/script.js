@@ -28,6 +28,9 @@ window.addEventListener('load', function () {
       this.effect.context.fillRect(this.x, this.y, this.size, this.size)
     }
     update() {
+      this.dx = this.effect.mouse.x - this.x
+      this.dy  = this.effect.mouse.y - this.y
+      this.distance = Math.sqrt(this.dx * this.dx + this.dy * this.dy)
       this.x += (this.originX - this.x) * this.ease
       this.y += (this.originY - this.y) * this.ease
     }
