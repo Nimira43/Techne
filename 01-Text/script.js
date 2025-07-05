@@ -27,6 +27,10 @@ window.addEventListener('load', function () {
       this.lineHeight = this.fontSize * 0.8
       this.maxTextWidth = this.canvasWidth * 0.8
       this.textInput = document.getElementById('textInput')
+      this.textInput.addEventListener('keyup', function(e) {
+        this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
+        this.wrapText(e.target.value)
+      })
     }
     wrapText(text) {
       const gradient = this.context.createLinearGradient(
@@ -66,12 +70,6 @@ window.addEventListener('load', function () {
         this.context.strokeText(el, this.textX, this.textY + (index * this.lineHeight))      
       })
     }
-             
-    // textInput.addEventListener('keyup', function(e) {
-    //   ctx.clearRect(0, 0, canvas.width, canvas.height)
-    //   wrapText(e.target.value)
-    // })
-    
     convertToParticles() {
 
     }
