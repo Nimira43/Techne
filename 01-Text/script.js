@@ -90,7 +90,9 @@ window.addEventListener('load', function () {
       this.context.textBaseline = 'middle'
       this.context.lineWidth = 3
       this.context.strokeStyle = '#ff0000'
-      this.context.font = this.fontSize + 'px Fredericka the Great'
+      // this.context.font = this.fontSize + 'px Alfa Slab One'
+      this.context.font = this.fontSize + 'px Permanent Marker'
+      // this.context.font = this.fontSize + 'px Unbounded'
        
       let linesArray = []
       let words = text.split(' ')
