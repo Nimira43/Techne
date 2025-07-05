@@ -8,11 +8,11 @@ window.addEventListener('load', function () {
     constructor(effect, x, y, colour) {
       this.effect = effect
       this.x = Math.random() * this.effect.canvasWidth
-      this.y = 0
+      this.y = this.effect.canvasHeight
       this.colour = colour
       this.originX = x
       this.originY = y
-      this.size = this.effect.gap // Change this - default: this.effect.gap
+      this.size = this.effect.gap 
       this.dx = 0
       this.dy = 0
       this.vx = 0
@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
         }
       })
       this.particles = []
-      this.gap = 3   // Change this - default: 3
+      this.gap = 3 
       this.mouse = {
         radius: 20000,
         x: 0,
@@ -113,7 +113,6 @@ window.addEventListener('load', function () {
             const red = pixels[index]
             const green = pixels[index + 1] 
             const blue = pixels[index + 2] 
-            // const colour = 'rgb(' + red + ',' + green + ',' + blue + ',' + ')'
             const colour = `rgb(${red},${green},${blue})`
             this.particles.push(new Particle(this, x, y, colour))
           }
@@ -130,7 +129,7 @@ window.addEventListener('load', function () {
   }
 
   const effect = new Effect(ctx, canvas.width, canvas.height)
-  effect.wrapText('NimiraTech')
+  effect.wrapText('This is sample text to see how it looks with a lot of words showing on screen.')
   effect.render()
   
   function animate() {
