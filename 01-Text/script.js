@@ -134,6 +134,7 @@ window.addEventListener('load', function () {
   effect.render()
   
   function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
     effect.render()
     requestAnimationFrame(animate)
   }
