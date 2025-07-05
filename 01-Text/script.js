@@ -40,6 +40,10 @@ window.addEventListener('load', function () {
         x: 0,
         y: 0
       }
+      window.addEventListener('mousemove', (e) => {
+        this.mouse.x = e.x,
+        this.mouse.y = e.y
+      })
     }
     wrapText(text) {
       const gradient = this.context.createLinearGradient(
