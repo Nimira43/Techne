@@ -129,7 +129,7 @@ window.addEventListener('load', function () {
 
   const effect = new Effect(ctx, canvas.width, canvas.height)
   effect.wrapText('NimiraTech')
-  
+  effect.render()
   
 
   function animate() {
