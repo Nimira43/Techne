@@ -5,8 +5,13 @@ window.addEventListener('load', function () {
   canvas.height = window.innerHeight 
 
   class Particle {
-    constructor() {
-
+    constructor(effect, x, y, colour) {
+      this.effect = effect
+      this.x = Math.random() * this.effect.canvasWidth
+      this.y = 0
+      this.colour = colour
+      this.originX = x
+      this.originY = y
     }
     draw() {
 
@@ -97,7 +102,6 @@ window.addEventListener('load', function () {
             const blue = pixels[index + 2] 
             // const colour = 'rgb(' + red + ',' + green + ',' + blue + ',' + ')'
             const colour = `rgb(${red},${green},${blue})`
-            console.log(colour)
           }
         }
       }
