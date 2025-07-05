@@ -84,7 +84,8 @@ window.addEventListener('load', function () {
       })
     }
     convertToParticles() {
-
+      this.particles = []
+      const pexels = this.context.getImageData()
     }
     render() {
 
