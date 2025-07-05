@@ -12,6 +12,11 @@ window.addEventListener('load', function () {
       this.colour = colour
       this.originX = x
       this.originY = y
+      this.size = this.effect.gap
+      this.dx = 0
+      this.dy = 0
+      this.vx = 0
+      this.vy = 0
     }
     draw() {
 
