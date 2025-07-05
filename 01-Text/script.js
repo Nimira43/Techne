@@ -129,7 +129,7 @@ window.addEventListener('load', function () {
   }
 
   const effect = new Effect(ctx, canvas.width, canvas.height)
-  effect.wrapText('This is sample text to see how it looks with a lot of words showing on screen.')
+  effect.wrapText('NimiraTech - Please enter some text...')
   effect.render()
   
   function animate() {
