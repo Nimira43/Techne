@@ -28,6 +28,5 @@ input {
 }
 
 input::placeholder {
-  color: #2b6d2b;
   color: #ff8c00;
 }
