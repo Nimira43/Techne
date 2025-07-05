@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
       this.colour = colour
       this.originX = x
       this.originY = y
-      this.size = this.effect.gap + 1 // Change this - default: this.effect.gap
+      this.size = this.effect.gap // Change this - default: this.effect.gap
       this.dx = 0
       this.dy = 0
       this.vx = 0
@@ -25,10 +25,11 @@ window.addEventListener('load', function () {
     }
     draw() {
       this.effect.context.fillStyle = this.colour
-      this.effect.context.fillRect(this.originX, this.originY, this.size, this.size)
+      this.effect.context.fillRect(this.x, this.y, this.size, this.size)
     }
     update() {
-      
+      this.x += this.originX - this.x
+      this.y += this.originY - this.y
     }
   }
   
@@ -50,7 +51,7 @@ window.addEventListener('load', function () {
         }
       })
       this.particles = []
-      this.gap = 6   // Change this - default: 3
+      this.gap = 3   // Change this - default: 3
       this.mouse = {
         radius: 20000,
         x: 0,
@@ -132,9 +133,10 @@ window.addEventListener('load', function () {
   effect.wrapText('NimiraTech')
   effect.render()
   
-
   function animate() {
-
-  }  
+    effect.render()
+    requestAnimationFrame(animate)
+  }
+  animate()  
 })
 
