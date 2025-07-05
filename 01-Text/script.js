@@ -1,6 +1,4 @@
 window.addEventListener('load', function () {
-
-  const textInput = this.document.getElementById('textInput')
   const canvas = document.getElementById('canvas1')
   const ctx = canvas.getContext('2d')
   canvas.width = window.innerWidth
@@ -28,6 +26,7 @@ window.addEventListener('load', function () {
       this.fontSize = 100
       this.lineHeight = this.fontSize * 0.8
       this.maxTextWidth = this.canvasWidth * 0.8
+      this.textInput = document.getElementById('textInput')
     }
     wrapText(text) {
       const gradient = this.context.createLinearGradient(
@@ -43,9 +42,7 @@ window.addEventListener('load', function () {
       this.context.lineWidth = 3
       this.context.strokeStyle = '#0000ff'
       this.context.font = this.fontSize + 'px Verdana'
-      // this.context.fillText(text, this.textX, this.textY)
-      // this.context.strokeText(text, this.textX, this.textY)
-      
+       
       let linesArray = []
       let words = text.split(' ')
       let lineCounter = 0
