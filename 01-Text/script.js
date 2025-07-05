@@ -17,6 +17,11 @@ window.addEventListener('load', function () {
       this.dy = 0
       this.vx = 0
       this.vy = 0
+      this.force = 0
+      this.angle = 0
+      this.distance = 0
+      this.friction = Math.random() * 0.6 + 0.15
+      this.ease = Math.random() * 0.1 + 0.005
     }
     draw() {
 
