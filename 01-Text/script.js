@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
     }
     draw() {
       this.effect.context.fillStyle = this.colour
-      this.effect.context.fillRect(this.x, this.y, this.size, this.size)
+      this.effect.context.fillRect(this.originX, this.originY, this.size, this.size)
     }
     update() {
       
