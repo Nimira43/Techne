@@ -88,7 +88,7 @@ window.addEventListener('load', function () {
       this.context.fillStyle = gradient
       this.context.textAlign = 'center'
       this.context.textBaseline = 'middle'
-      this.context.lineWidth = 1
+      this.context.lineWidth = 3
       this.context.strokeStyle = '#ff0000'
       this.context.font = this.fontSize + 'px Fredericka the Great'
        
