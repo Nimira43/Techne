@@ -120,12 +120,16 @@ window.addEventListener('load', function () {
       console.log(this.particles)
     }
     render() {
-
+      this.particles.forEach(particle => {
+        particle.update()
+        particle.draw()
+      })
     }
   }
 
   const effect = new Effect(ctx, canvas.width, canvas.height)
   effect.wrapText('NimiraTech')
+  
   
 
   function animate() {
