@@ -83,7 +83,7 @@ window.addEventListener('load', function () {
       )
       gradient.addColorStop(0.3, '#ffd700')
       gradient.addColorStop(0.5, '#ff8c00')
-      gradient.addColorStop(0.7, '#ff4500')
+      gradient.addColorStop(0.7, '#fa4e10')
       
       this.context.fillStyle = gradient
       this.context.textAlign = 'center'
