@@ -53,9 +53,10 @@ window.addEventListener('load', function () {
       this.textX = this.canvasWidth / 2
       this.textY = this.canvasHeight / 2
       this.fontSize = 130
-      this.lineHeight = this.fontSize * 0.9
+      this.lineHeight = this.fontSize * 1.1
       this.maxTextWidth = this.canvasWidth * 0.8
       this.textInput = document.getElementById('textInput')
+      this.verticalOffset = 50
       this.textInput.addEventListener('keyup', (e) => {  
         if (e.key !== ' ') {
           this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
@@ -85,7 +86,7 @@ window.addEventListener('load', function () {
       this.context.fillStyle = gradient
       this.context.textAlign = 'center'
       this.context.textBaseline = 'middle'
-      this.context.lineWidth = 3
+      this.context.lineWidth = 1
       this.context.strokeStyle = '#ff0000'
       this.context.font = this.fontSize + 'px Verdana'
        
@@ -105,7 +106,7 @@ window.addEventListener('load', function () {
         linesArray[lineCounter] = line 
       }  
       let textHeight = this.lineHeight * lineCounter
-      this.textY = this.canvasHeight / 2 - textHeight / 2
+      this.textY = this.canvasHeight / 2 - textHeight / 2 + this.verticalOffset
       
       linesArray.forEach((el, index) => {
         this.context.fillText(el, this.textX, this.textY + (index * this.lineHeight))
