@@ -91,6 +91,14 @@ window.addEventListener('load', function () {
         for (let x = 0; x < this.canvasWidth; x += this.gap) {
           const index = (y * this.canvasWidth + x) * 4
           const alpha = pixels[index + 3]
+          if (alpha > 0) {
+            const red = pixels[index]
+            const green = pixels[index + 1] 
+            const blue = pixels[index + 2] 
+            // const colour = 'rgb(' + red + ',' + green + ',' + blue + ',' + ')'
+            const colour = `rgb(${red},${green},${blue})`
+            console.log(colour)
+          }
         }
       }
     }
