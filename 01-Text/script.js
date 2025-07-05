@@ -23,8 +23,8 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.textX = this.canvasWidth / 2
       this.textY = this.canvasHeight / 2
-      this.fontSize = 100
-      this.lineHeight = this.fontSize * 0.8
+      this.fontSize = 80
+      this.lineHeight = this.fontSize * 0.9
       this.maxTextWidth = this.canvasWidth * 0.8
       this.textInput = document.getElementById('textInput')
       this.textInput.addEventListener('keyup', (e) => {  
@@ -33,6 +33,13 @@ window.addEventListener('load', function () {
           this.wrapText(e.target.value)
         }
       })
+      this.particles = []
+      this.gap = 3
+      this.mouse = {
+        radius: 20000,
+        x: 0,
+        y: 0
+      }
     }
     wrapText(text) {
       const gradient = this.context.createLinearGradient(
