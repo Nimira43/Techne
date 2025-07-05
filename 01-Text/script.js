@@ -24,7 +24,8 @@ window.addEventListener('load', function () {
       this.ease = Math.random() * 0.1 + 0.005
     }
     draw() {
-
+      this.effect.context.fillStyle = this.colour
+      this.effect.context.fillRect(this.x, this.y, this.size, this.size)
     }
     update() {
       
