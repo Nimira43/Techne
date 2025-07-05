@@ -82,10 +82,12 @@ window.addEventListener('load', function () {
         this.context.fillText(el, this.textX, this.textY + (index * this.lineHeight))
         this.context.strokeText(el, this.textX, this.textY + (index * this.lineHeight))      
       })
+      this.convertToParticles()
     }
     convertToParticles() {
       this.particles = []
-      const pexels = this.context.getImageData()
+      const pixels = this.context.getImageData(0, 0, this.canvasWidth, this.canvasHeight)
+      console.log(pixels)
     }
     render() {
 
@@ -94,7 +96,7 @@ window.addEventListener('load', function () {
 
   const effect = new Effect(ctx, canvas.width, canvas.height)
   effect.wrapText('NimiraTech')
-  console.log(effect)
+  
 
   function animate() {
 
