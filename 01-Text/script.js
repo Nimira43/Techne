@@ -113,9 +113,11 @@ window.addEventListener('load', function () {
             const blue = pixels[index + 2] 
             // const colour = 'rgb(' + red + ',' + green + ',' + blue + ',' + ')'
             const colour = `rgb(${red},${green},${blue})`
+            this.particles.push(new Particle(this, x, y, colour))
           }
         }
       }
+      console.log(this.particles)
     }
     render() {
 
