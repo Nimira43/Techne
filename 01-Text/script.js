@@ -86,8 +86,12 @@ window.addEventListener('load', function () {
     }
     convertToParticles() {
       this.particles = []
-      const pixels = this.context.getImageData(0, 0, this.canvasWidth, this.canvasHeight)
-      console.log(pixels)
+      const pixels = this.context.getImageData(0, 0, this.canvasWidth, this.canvasHeight).data
+      for (let y = 0; y < this.canvasHeight; y += this.gap) {
+        for (let x = 0; x < this.canvasWidth; x += this.gap) {
+          
+        }
+      }
     }
     render() {
 
