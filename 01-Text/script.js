@@ -87,7 +87,6 @@ window.addEventListener('load', function () {
       this.context.textBaseline = 'middle'
       this.context.lineWidth = 3
       this.context.strokeStyle = '#ff0000'
-      this.letterSpacing = '5px'
       this.context.font = this.fontSize + 'px Verdana'
        
       let linesArray = []
