@@ -28,7 +28,7 @@ window.addEventListener('load', function () {
       this.effect.context.fillRect(this.x, this.y, this.size, this.size)
     }
     update() {
-      this.x += this.originX - this.x
+      this.x += (this.originX - this.x) * this.ease
       this.y += this.originY - this.y
     }
   }
