@@ -52,11 +52,11 @@ window.addEventListener('load', function () {
       this.canvasHeight = canvasHeight
       this.textX = this.canvasWidth / 2
       this.textY = this.canvasHeight / 2
-      this.fontSize = 130
+      this.fontSize = 90
       this.lineHeight = this.fontSize * 1.1
       this.maxTextWidth = this.canvasWidth * 0.8
       this.textInput = document.getElementById('textInput')
-      this.verticalOffset = 50
+      this.verticalOffset = -70
       this.textInput.addEventListener('keyup', (e) => {  
         if (e.key !== ' ') {
           this.context.clearRect(0, 0, this.canvasWidth, this.canvasHeight)
@@ -142,7 +142,7 @@ window.addEventListener('load', function () {
   }
 
   const effect = new Effect(ctx, canvas.width, canvas.height)
-  effect.wrapText('NimiraTech - Please enter some text...')
+  effect.wrapText(effect.textInput.value)
   effect.render()
   
   function animate() {
