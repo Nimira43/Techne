@@ -142,6 +142,10 @@ window.addEventListener('load', function () {
         particle.draw()
       })
     }
+    resize(width, height) {
+      this.canvasWidth = width
+      this.canvasHeight = height
+    }
   }
 
   const effect = new Effect(ctx, canvas.width, canvas.height)
