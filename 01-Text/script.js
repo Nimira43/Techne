@@ -154,5 +154,10 @@ window.addEventListener('load', function () {
     requestAnimationFrame(animate)
   }
   animate()  
+
+  this.window.addEventListener('resize', function() {
+    canvas.width = this.window.innerWidth
+    canvas.height = this.window.innerHeight
+  })
 })
 
