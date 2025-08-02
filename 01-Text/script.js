@@ -145,6 +145,8 @@ window.addEventListener('load', function () {
     resize(width, height) {
       this.canvasWidth = width
       this.canvasHeight = height
+      this.textX = this.canvasWidth / 2
+      this.textY = this.canvasHeight / 2
     }
   }
 
