@@ -147,6 +147,7 @@ window.addEventListener('load', function () {
       this.canvasHeight = height
       this.textX = this.canvasWidth / 2
       this.textY = this.canvasHeight / 2
+      this.maxTextWidth = this.canvasWidth * 0.8
     }
   }
 
@@ -164,6 +165,8 @@ window.addEventListener('load', function () {
   this.window.addEventListener('resize', function() {
     canvas.width = this.window.innerWidth
     canvas.height = this.window.innerHeight
+    effect.resize(canvas.width, canvas.height)
+    effect.wrapText(effect.textInput.value)
   })
 })
 
